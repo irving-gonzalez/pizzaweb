@@ -10,7 +10,7 @@ namespace pizzaApp.Models
         public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         public DateTime Date  { get; set; }
         public int Qty { get; set; }
     }

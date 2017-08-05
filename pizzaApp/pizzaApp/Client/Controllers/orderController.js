@@ -1,7 +1,20 @@
 ﻿angular.module('main').controller('orderCtrl',function ($scope, $http) {
 
+    $scope.total = 40.00;
+    $scope.quantity = 1;
+    $scope.price = 20.00;
+      
+
+    $scope.quantityChanged = function () {
+        document.getElementById('firstName').value="changed in angular";
+    };
 
 
+    $scope.AreOrders = function () {
+        if ($scope.quantity < 1)
+            return true
+        else return false;
+    };
 
     $scope.sendForm = function () {
 
@@ -9,6 +22,7 @@
        var first = document.getElementById('firstName').value;
        var last = document.getElementById('lastName').value;
        var phone = document.getElementById('phone').value;
+       var qty = document.getElementById('qty').value;  
 
         //use valios from the form to create object
        var d =new Date("October 13, 2014 11:13:00");
@@ -17,7 +31,8 @@
            FirstName: first,
            LastName: last,
            Phone: phone,
-           Date: d
+           Date: d,
+           Qty: qty
        };
    
 
