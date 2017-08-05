@@ -1,8 +1,38 @@
-﻿angular.module("main", []);
+﻿var app = angular.module("main", ["ngRoute"]);
 
 
-angular.module('main').controller('mainCtrl', function ($scope,$http) {
+app.config(function ($routeProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl: "/Client/Views/index.html",
+            controller: "orderCtrl"
 
-    $scope.input1 = "name";
-  
+        }).when("/Orders", {
+            templateUrl: "/Client/Views/Orders.html"
+        });
 });
+
+
+
+
+
+app.controller('mainCtrl', function ($scope, $http) {
+
+    $scope.input1 = "controlling from main";
+    $scope.input2 = "controlling from main";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
