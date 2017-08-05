@@ -8,10 +8,10 @@ namespace pizzaApp.Models
     public class Order
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int Phone { get; set; }
         public DateTime Date  { get; set; }
-        public int number { get; set; }
-
+        public int Qty { get; set; }
     }
 }

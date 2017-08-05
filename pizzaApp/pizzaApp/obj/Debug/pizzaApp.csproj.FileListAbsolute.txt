@@ -95,4 +95,11 @@ C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Helpers.xml
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Mvc.xml
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\obj\Debug\pizzaApp.dll
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\obj\Debug\pizzaApp.pdb
-C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\obj\Debug\pizzaApp.csprojResolveAssemblyReference.cache
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\Newtonsoft.Json.dll
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Net.Http.Formatting.dll
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Http.dll
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Http.WebHost.dll
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\Newtonsoft.Json.xml
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Net.Http.Formatting.xml
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Http.xml
+C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Http.WebHost.xml
