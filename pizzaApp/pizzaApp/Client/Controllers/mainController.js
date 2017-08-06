@@ -1,6 +1,10 @@
 ﻿var app = angular.module("main", ["ngRoute"]);
 
 
+
+
+
+
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
@@ -8,7 +12,8 @@ app.config(function ($routeProvider) {
             controller: "orderCtrl"
 
         }).when("/Orders", {
-            templateUrl: "/Client/Views/Orders.html"
+            templateUrl: "/Client/Views/Orders.html",
+            controller: "listOrdersCtrl" 
         });
 });
 
@@ -18,8 +23,6 @@ app.config(function ($routeProvider) {
 
 app.controller('mainCtrl', function ($scope, $http) {
 
-    $scope.input1 = "controlling from main";
-    $scope.input2 = "controlling from main";
 });
 
 

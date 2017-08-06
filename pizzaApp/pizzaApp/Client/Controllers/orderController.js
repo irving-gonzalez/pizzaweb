@@ -3,19 +3,38 @@
     $scope.total = 40.00;
     $scope.quantity = 1;
     $scope.price = 20.00;
-      
+    $scope.date='';
 
     $scope.quantityChanged = function () {
-        document.getElementById('firstName').value="changed in angular";
+       
     };
 
+    //validate date
+    $scope.$watch('date', function (newVal, oldVal) {
 
+        if (newVal.length > 5)
+        {
+            $scope.date = oldVal;
+            return;
+        }
+
+        if (newVal.length  === 2 )
+            $scope.date = newVal + '/';
+    });
+
+
+    //display table with order info if there are orders
     $scope.AreOrders = function () {
         if ($scope.quantity < 1)
-            return true
+            return true;
         else return false;
     };
 
+
+
+
+
+    ////get data from forms and send it to save the order in database
     $scope.sendForm = function () {
 
         //get values from the form

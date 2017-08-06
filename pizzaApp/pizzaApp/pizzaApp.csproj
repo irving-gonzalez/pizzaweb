@@ -108,12 +108,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\Controllers\listOrdersController.js" />
     <Content Include="Client\Controllers\mainController.js" />
     <Content Include="Client\Controllers\orderController.js" />
     <Content Include="Client\Views\index.html" />
     <Content Include="Client\Views\Orders.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\refresh.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

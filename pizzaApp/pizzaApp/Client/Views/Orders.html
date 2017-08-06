@@ -1,7 +1,69 @@
-﻿
+﻿<style>
+    img {
+        max-width: 25%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
 
-<div class="container col-lg-10" style="background:gray; ">
-   <h1>{{input1}}</h1>
-</div>
 
+
+<div class="container" >
+  
+    <button ng-click="refresh()"> refresh</button>
+
+    <!--order review panel-->
+    <div class="row">
+        <div class="col-xs-12 " >
+            <div class="panel panel-default">
+                <div class="panel-heading">Order Review</div>
+                <div class="panel-body">
+                   
+
+                         <!--refresh button-->
+                        <div class="row">
+                            <div class="col-sm-2 col-sm-offset-5">
+
+                                <img src="../../Content/img/refresh.png" ng-click="refresh()" />
+                            </div>
+                        </div>
+
+                        <!--table for order-->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-striped" ng-hide="AreOrders()">
+                                    <thead>
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Phone</th>
+                                            <th>Delivery Date</th>
+                                            <th>Qty</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in data">
+                                            <td>{{item.FirstName}}</td>
+                                            <td>{{item.LastName}}</td>
+                                            <td>{{item.Phone}}</td>
+                                            <td>{{item.Date}}</td>
+                                            <td>{{item.Qty}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                  
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    </div>
 

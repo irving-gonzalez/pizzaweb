@@ -1,4 +1,5 @@
-﻿using pizzaApp.Models;
+﻿using Newtonsoft.Json;
+using pizzaApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,15 @@ namespace pizzaApp.Controllers
         PizzaContext db = new PizzaContext();
 
         // GET: Api/
-        public ActionResult Index()
+        public string Index()
         {
-            return View();
+           List<Order> results = new List<Order>();
+            foreach (Order order in db.Orders)
+            {
+                results.Add(order);
+            }
+            string json = JsonConvert.SerializeObject(results);
+            return json;
         }
 
         // POST: Api/
