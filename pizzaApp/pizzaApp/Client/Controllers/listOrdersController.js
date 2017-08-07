@@ -1,21 +1,53 @@
 ﻿angular.module('main').controller('listOrdersCtrl', function ($scope, $http) {
-
-
-    $scope.FirstName;
-    $scope.LastName;
-    $scope.Phone;
-    $scope.Date;
-    $scope.Qty;
-   
         
     $scope.data;
 
 
+    var sort_desc_date = function (order1, order2) {
+
+        if (order1.Date > order2.Date) return -1;
+        if (order1.Date < order2.Date) return 1;
+        return 0;
+    };
+
+    var sort_desc_qty = function (order1, order2) {
+
+        if (order1.Qty > order2.Qty) return -1;
+        if (order1.Qty < order2.Qty) return 1;
+        return 0;
+    };
+
+
+
+
+    ///
+    var rotate = function () {
+       
+        var angle = 0;
+
+        var myVar = setInterval(function () {
+            angle += 10;
+            var icon = document.getElementById('refresh');
+            icon.style.transform = "rotate(" + angle + "deg)";
+        }, 20);
+
+        return myvar;
+    };
+
 
     $scope.refresh = function () {
-
         ///adding time to each request to avoid request cachin in IE
         var buster = new Date().getTime();
+
+
+        //make arrow spin
+        var angle = 0;
+        var myVar = setInterval(function () {
+            angle += 10;
+            var icon = document.getElementById('refresh');
+            icon.style.transform = "rotate(" + angle + "deg)";
+        }, 20);
+
 
         $http({
             url: '/Api/?buster='+buster,
@@ -27,19 +59,19 @@
                 // success
                 // document.getElementById('test1').innerHTML = response.data[0].FirstName;
                 $scope.data = response.data;
+                $scope.data.sort(sort_desc_date);
+
+                //stop the arrow spinning
+                clearInterval(myVar);
             },
             function (response) { // optional
                 // failed
                 document.getElementById('test1').innerHTML = "did not work correctly";
-            });
+          });
 
+
+       
     };
-
-
-    
-   
-
-
 
 
 

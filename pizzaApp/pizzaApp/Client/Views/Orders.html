@@ -10,7 +10,7 @@
 
 
 
-<div class="container" >
+<div class="container"  ng-init="refresh()">
   
     <button ng-click="refresh()"> refresh</button>
 
@@ -21,12 +21,10 @@
                 <div class="panel-heading">Order Review</div>
                 <div class="panel-body">
                    
-
                          <!--refresh button-->
                         <div class="row">
                             <div class="col-sm-2 col-sm-offset-5">
-
-                                <img src="../../Content/img/refresh.png" ng-click="refresh()" />
+                                <img src="../../Content/img/refresh.png" ng-click="refresh()" id="refresh" />
                             </div>
                         </div>
 
@@ -55,15 +53,11 @@
                                 </table>
                             </div>
                         </div>
-                  
-
-
-
+                
                 </div>
             </div>
         </div>
     </div>
-
-        
+     
     </div>
 
