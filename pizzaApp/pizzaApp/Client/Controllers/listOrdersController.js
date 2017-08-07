@@ -1,7 +1,7 @@
 ﻿angular.module('main').controller('listOrdersCtrl', function ($scope, $http) {
         
     $scope.data;
-
+    $scope.spinnerVisibility = true;
 
     var sort_desc_date = function (order1, order2) {
 
@@ -39,7 +39,8 @@
         ///adding time to each request to avoid request cachin in IE
         var buster = new Date().getTime();
 
-
+        //show spinner on http request
+        $scope.spinnerVisibility = false;
 
         $http({
             url: '/Api/?buster='+buster,
@@ -53,7 +54,8 @@
                 $scope.data = response.data;
                 $scope.data.sort(sort_desc_id);
 
-             
+                //hide spinner
+                $scope.spinnerVisibility = true;
             },
             function (response) { // optional
                 // failed

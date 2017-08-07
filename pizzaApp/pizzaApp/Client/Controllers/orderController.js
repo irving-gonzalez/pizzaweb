@@ -6,6 +6,8 @@
     $scope.date = '';
     $scope.phone = '';
 
+    $scope.spinnerVisibility = true;
+
     //array to store validation errors
     $scope.validationList = "";
 
@@ -74,6 +76,8 @@
      //check all the input fields, validate, and return array with list of errors
     var validate = function () {
 
+        //show spinner
+        $scope.spinnerVisibility = false;
 
         var validationList = new Array();
         var validationList2 = new Array();
@@ -155,7 +159,7 @@
         })
             .then(function (response) {
                 // success
-                alert('Sending order');
+                $scope.spinnerVisibility = false;
                 $window.location.href = '#!Orders';
             },
             function (response) { // optional
