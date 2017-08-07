@@ -64,6 +64,10 @@
        if (validate()) {
           //post the order to the server to be stored in database
         //takes order object as parameter
+
+           //show spinner
+           $scope.spinnerVisibility = false;
+
            HttpPost(order);
            
        }
@@ -76,8 +80,7 @@
      //check all the input fields, validate, and return array with list of errors
     var validate = function () {
 
-        //show spinner
-        $scope.spinnerVisibility = false;
+      
 
         var validationList = new Array();
         var validationList2 = new Array();
