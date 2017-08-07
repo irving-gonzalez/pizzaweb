@@ -7,7 +7,7 @@
 
 app.config(function ($routeProvider) {
     $routeProvider
-        .when("/", {
+        .when("/PlaceOrder", {
             templateUrl: "/Client/Views/index.html",
             controller: "orderCtrl"
 
