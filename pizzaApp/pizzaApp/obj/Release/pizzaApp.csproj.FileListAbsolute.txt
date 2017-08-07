@@ -54,6 +54,5 @@ C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Webpages.Deplo
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Webpages.Razor.xml
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Helpers.xml
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\bin\System.Web.Mvc.xml
-C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\obj\Release\pizzaApp.csprojResolveAssemblyReference.cache
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\obj\Release\pizzaApp.dll
 C:\Users\Irving\Desktop\pizzaweb\pizzaApp\pizzaApp\obj\Release\pizzaApp.pdb
