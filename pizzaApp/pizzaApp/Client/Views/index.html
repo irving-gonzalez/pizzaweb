@@ -12,21 +12,21 @@
 
 
 
-<div class="container" style="background-color:#2ba6cb">
+<div class="container">
 
     <!--left side -->
-    <div class="col-sm-6" style="background-color:burlywood">
+    <div class="col-sm-6" >
 
        
 
 
         <!--order review panel-->
         <div class="row">
-            <div class="col-xs-12 " style="background-color:red">
+            <div class="col-xs-12 " >
                 <div class="panel panel-default">
                     <div class="panel-heading">Order Review</div>
                     <div class="panel-body">
-                        <p>Please complete the fields below  and click "Place Your Order".</p>
+                        <p>Please complete the fields below  and click "Place  Order".</p>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
 
         <!--information panel-->
         <div class="row">
-            <div class="col-xs-12 " style="background-color:red">
+            <div class="col-xs-12 " >
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Information</div>
                     <div class="panel-body">
@@ -79,10 +79,10 @@
     </div>
 
     <!--right side-->
-    <div class="col-sm-6" style="background-color:brown">
+    <div class="col-sm-6" >
 
         <div class="row">
-            <div class="col-xs-12 " style="background-color:cadetblue">
+            <div class="col-xs-12 " >
                 <div class="panel panel-default">
                     <div class="panel-heading">Order Summary</div>
                     <div class="panel-body">
@@ -102,14 +102,10 @@
                                         <tr>
                                             <td>Large (14")The One Pizza</td>
                                             <td>1</td>
-                                            <td>{{quantity* price}}</td>
+                                            <td>${{quantity* price}}.00</td>
                                         </tr>
 
-                                        <tr>
-                                            <td>July</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
+                       
                                     </tbody>
                                 </table>
                             </div>
@@ -173,15 +169,14 @@
 
 
 
-        <!--submit button-->
-        <div class="row">
-            <div class="col-sm-10 col-sm-offset-2">
-                <button ng-click="sendForm()">submit</button>
-            </div>
-        </div>
+    
         <!--right side end-->
-
     </div>
-
+    <!--submit button-->
+    <div class="row">
+        <div class="col-sm-7 col-sm-offset-5">
+            <button type="button" class="btn btn-primary" ng-click="sendForm()">Place Order</button>
+        </div>
+    </div>
 
 </div>

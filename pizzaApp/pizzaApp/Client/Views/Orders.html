@@ -12,21 +12,19 @@
 
 <div class="container"  ng-init="refresh()">
   
-    <button ng-click="refresh()"> refresh</button>
+    
 
     <!--order review panel-->
     <div class="row">
         <div class="col-xs-12 " >
             <div class="panel panel-default">
-                <div class="panel-heading">Order Review</div>
+                <div class="panel-heading">
+                     Pending Orders
+                    <button ng-click="refresh()"> refresh</button>
+                </div>
                 <div class="panel-body">
                    
-                         <!--refresh button-->
-                        <div class="row">
-                            <div class="col-sm-2 col-sm-offset-5">
-                                <img src="../../Content/img/refresh.png" ng-click="refresh()" id="refresh" />
-                            </div>
-                        </div>
+                         
 
                         <!--table for order-->
                         <div class="row">
@@ -34,6 +32,7 @@
                                 <table class="table table-striped" ng-hide="AreOrders()">
                                     <thead>
                                         <tr>
+                                            <th>transaction#</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
                                             <th>Phone</th>
@@ -43,6 +42,7 @@
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="item in data">
+                                            <td>{{item.ID}}</td>
                                             <td>{{item.FirstName}}</td>
                                             <td>{{item.LastName}}</td>
                                             <td>{{item.Phone}}</td>

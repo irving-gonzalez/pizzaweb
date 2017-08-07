@@ -1,4 +1,4 @@
-﻿angular.module('main').controller('orderCtrl',function ($scope, $http) {
+﻿angular.module('main').controller('orderCtrl', function ($window,$scope, $http) {
 
     $scope.total = 40.00;    
     $scope.quantity = 1;
@@ -44,8 +44,10 @@
        var qty = document.getElementById('qty').value;  
        var day = document.getElementById('day').value;
        var month = document.getElementById('month').value;
+       var hours = document.getElementById('hours').value;
+       var minutes = document.getElementById('minutes').value;
         //use valios from the form to create object
-       var d =  new Date(2017, month-1, day, 0, 0, 0, 0);
+       var d =  new Date(2017, month-1, day, hours, minutes, 0, 0);
 
        var order = {
            FirstName: first,
@@ -60,7 +62,8 @@
        if (validate()) {
           //post the order to the server to be stored in database
         //takes order object as parameter
-          HttpPost(order);
+           HttpPost(order);
+           
        }
 
    
@@ -82,7 +85,9 @@
         var qty = document.getElementById('qty').value;
         var day = document.getElementById('day').value;
         var month = document.getElementById('month').value;
-       
+        var hours = document.getElementById('hours').value;
+        var minutes = document.getElementById('minutes').value;
+
         if (first === "") {
             validationList.push('first name required');
         }
@@ -114,15 +119,24 @@
         {
             validationList2.push('invalid day');
         }
-        if (month > 12 || day === "") {
+        if (month > 12 || month === "") {
             validationList2.push('invalid month');
+        }
+
+    
+
+        if (hours > 24 || hours === "") {
+            validationList2.push('invalid hour');
+        }
+        if (minutes > 60 || minutes === "") {
+            validationList2.push('invalid minutes');
         }
 
         $scope.validationList2 = validationList2;
 
         /////////////////////////////////////////////////////
 
-        if (validationList.length > 0 || validationList.length > 0)
+        if (validationList.length > 0 || validationList2.length > 0)
             return false;
 
         else return true;
@@ -141,11 +155,11 @@
         })
             .then(function (response) {
                 // success
-                document.getElementById('firstName').value = response.data;
+                alert('Sending order');
+                $window.location.href = '#!Orders';
             },
             function (response) { // optional
                 // failed
-                document.getElementById('firstName').value = "did not work correctly";
             });
 
     };

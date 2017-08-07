@@ -10,10 +10,10 @@
         return 0;
     };
 
-    var sort_desc_qty = function (order1, order2) {
+    var sort_desc_id = function (order1, order2) {
 
-        if (order1.Qty > order2.Qty) return -1;
-        if (order1.Qty < order2.Qty) return 1;
+        if (order1.ID > order2.ID) return -1;
+        if (order1.ID < order2.ID) return 1;
         return 0;
     };
 
@@ -40,14 +40,6 @@
         var buster = new Date().getTime();
 
 
-        //make arrow spin
-        var angle = 0;
-        var myVar = setInterval(function () {
-            angle += 10;
-            var icon = document.getElementById('refresh');
-            icon.style.transform = "rotate(" + angle + "deg)";
-        }, 20);
-
 
         $http({
             url: '/Api/?buster='+buster,
@@ -59,10 +51,9 @@
                 // success
                 // document.getElementById('test1').innerHTML = response.data[0].FirstName;
                 $scope.data = response.data;
-                $scope.data.sort(sort_desc_date);
+                $scope.data.sort(sort_desc_id);
 
-                //stop the arrow spinning
-                clearInterval(myVar);
+             
             },
             function (response) { // optional
                 // failed
